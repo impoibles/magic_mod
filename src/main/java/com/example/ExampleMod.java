@@ -1,7 +1,8 @@
 package com.example;
 
 import net.fabricmc.api.ModInitializer;
-
+import com.example.item.ModItems;
+import com.example.item.ModItemGroups;
 import net.minecraft.resources.ResourceLocation;
 
 import org.slf4j.Logger;
@@ -22,6 +23,8 @@ public class ExampleMod implements ModInitializer {
 		// Proceed with mild caution.
 
 		LOGGER.info("Hello Fabric world!");
+		ModItems.register();
+		ModItemGroups.register();
 	}
 
 	public static ResourceLocation id(String path) {

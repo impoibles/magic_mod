@@ -1,0 +1,9 @@
+{
+    "item.modid.fire_crystal": "Fire Crystal",
+    "item.modid.earth_crystal": "Earth Crystal",
+    "item.modid.water_crystal": "Water Crystal",
+    "item.modid.air_crystal": "Air Crystal",
+    "item.modid.light_crystal": "Light Crystal",
+    "item.modid.dark_crystal": "Dark Crystal",
+    "itemGroup.modid.magic": "Magic"
+}
