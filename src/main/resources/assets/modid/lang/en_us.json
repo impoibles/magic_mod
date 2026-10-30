@@ -1,9 +1,15 @@
 {
     "item.modid.fire_crystal": "Fire Crystal",
+    "item.modid.fire_crystal.tooltip": "Burns with an eternal flame",
     "item.modid.earth_crystal": "Earth Crystal",
+    "item.modid.earth_crystal.tooltip": "Holds the strength of stone",
     "item.modid.water_crystal": "Water Crystal",
+    "item.modid.water_crystal.tooltip": "Flows like a mountain stream",
     "item.modid.air_crystal": "Air Crystal",
+    "item.modid.air_crystal.tooltip": "Light as the wind",
     "item.modid.light_crystal": "Light Crystal",
+    "item.modid.light_crystal.tooltip": "Shines with pure light",
     "item.modid.dark_crystal": "Dark Crystal",
+    "item.modid.dark_crystal.tooltip": "Absorbs all light around it",
     "itemGroup.modid.magic": "Magic"
 }

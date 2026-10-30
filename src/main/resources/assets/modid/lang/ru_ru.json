@@ -1,0 +1,15 @@
+{
+    "item.modid.fire_crystal": "Кристалл огня",
+    "item.modid.fire_crystal.tooltip": "Горит вечным пламенем",
+    "item.modid.earth_crystal": "Кристалл земли",
+    "item.modid.earth_crystal.tooltip": "Хранит силу камня",
+    "item.modid.water_crystal": "Кристалл воды",
+    "item.modid.water_crystal.tooltip": "Течёт, как горный ручей",
+    "item.modid.air_crystal": "Кристалл воздуха",
+    "item.modid.air_crystal.tooltip": "Лёгкий, как ветер",
+    "item.modid.light_crystal": "Кристалл света",
+    "item.modid.light_crystal.tooltip": "Сияет чистым светом",
+    "item.modid.dark_crystal": "Кристалл тьмы",
+    "item.modid.dark_crystal.tooltip": "Поглощает весь свет вокруг",
+    "itemGroup.modid.magic": "Магия"
+}
