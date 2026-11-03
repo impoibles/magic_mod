@@ -1,7 +1,7 @@
 package com.example.command;
 
 import com.example.mana.ManaData;
-import com.example.mana.ModAttachments;
+import com.example.attachment.ModAttachments;
 import com.mojang.brigadier.arguments.DoubleArgumentType;
 import net.fabricmc.fabric.api.command.v2.CommandRegistrationCallback;
 import net.minecraft.commands.Commands;

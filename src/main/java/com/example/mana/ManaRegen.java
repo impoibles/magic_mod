@@ -1,6 +1,6 @@
 package com.example.mana;
 
-import com.mojang.serialization.codecs.RecordCodecBuilder;
+import com.example.attachment.ModAttachments;
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents;
 
 public class ManaRegen {

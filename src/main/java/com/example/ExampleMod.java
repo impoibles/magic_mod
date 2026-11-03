@@ -2,7 +2,7 @@ package com.example;
 
 import com.example.command.ManaCommand;
 import com.example.mana.ManaRegen;
-import com.example.mana.ModAttachments;
+import com.example.attachment.ModAttachments;
 import net.fabricmc.api.ModInitializer;
 import com.example.item.ModItems;
 import com.example.item.ModItemGroups;
