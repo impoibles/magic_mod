@@ -1,6 +1,6 @@
 package com.example;
 
-import com.example.command.ManaCommand;
+import com.example.command.ManaCommands;
 import com.example.mana.ManaRegen;
 import com.example.attachment.ModAttachments;
 import net.fabricmc.api.ModInitializer;
@@ -29,7 +29,7 @@ public class ExampleMod implements ModInitializer {
 		ModItems.register();
 		ModItemGroups.register();
 		ModAttachments.register();
-		ManaCommand.register();
+		ManaCommands.register();
 		ManaRegen.register();
 	}
 

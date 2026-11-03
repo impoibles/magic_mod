@@ -13,7 +13,7 @@ public class ManaRegen {
             server.getPlayerList().getPlayers().forEach(player -> {
                 ManaData playerMana = player.getAttachedOrCreate(ModAttachments.MANA);
                 if (playerMana.currentMana() < playerMana.maxMana()) {
-                    double manaRegen = (SPEED_COEFFICIENT * Math.sqrt(playerMana.maxMana()))/20;
+                    double manaRegen = (SPEED_COEFFICIENT * Math.sqrt(playerMana.maxMana()))/TICKS_PER_SECOND;
                     double newPlayerCurrentMana = Math.min(playerMana.maxMana(), playerMana.currentMana() + manaRegen);
                     ManaData newPlayerMana = new ManaData(playerMana.maxMana(), newPlayerCurrentMana, playerMana.growthCount(), playerMana.spentTowardsGrowth());
                     player.setAttached(ModAttachments.MANA, newPlayerMana);
