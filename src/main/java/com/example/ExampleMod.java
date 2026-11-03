@@ -1,5 +1,7 @@
 package com.example;
 
+import com.example.command.ManaCommand;
+import com.example.mana.ManaRegen;
 import com.example.mana.ModAttachments;
 import net.fabricmc.api.ModInitializer;
 import com.example.item.ModItems;
@@ -27,6 +29,8 @@ public class ExampleMod implements ModInitializer {
 		ModItems.register();
 		ModItemGroups.register();
 		ModAttachments.register();
+		ManaCommand.register();
+		ManaRegen.register();
 	}
 
 	public static ResourceLocation id(String path) {

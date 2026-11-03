@@ -11,5 +11,7 @@
     "item.modid.light_crystal.tooltip": "Shines with pure light",
     "item.modid.dark_crystal": "Dark Crystal",
     "item.modid.dark_crystal.tooltip": "Absorbs all light around it",
+    "command.modid.mana_count": "Mana: %1$s/%2$s",
+    "command.modid.set_current_mana": "Mana has been changed to %1$s",
     "itemGroup.modid.magic": "Magic"
 }

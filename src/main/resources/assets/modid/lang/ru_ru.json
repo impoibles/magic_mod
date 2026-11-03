@@ -11,5 +11,7 @@
     "item.modid.light_crystal.tooltip": "Сияет чистым светом",
     "item.modid.dark_crystal": "Кристалл тьмы",
     "item.modid.dark_crystal.tooltip": "Поглощает весь свет вокруг",
+    "command.modid.mana_count": "Мана: %1$s из %2$s",
+    "command.modid.set_current_mana": "Мана была изменена, текущее значение: %1$s",
     "itemGroup.modid.magic": "Магия"
 }
