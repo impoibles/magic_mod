@@ -8,8 +8,9 @@ import java.util.List;
 
 public class ManaManager {
     private static final double FIRST_MANA_BOOST = 0.5;
-    private static final double MANA_BOOST_CONST = 0.9;
+    private static final double GROWTH_DECAY = 0.9;
     private static final double MANA_MAX_MULTIPLIER = 1;
+    private static final double GROWTH_UP_MULTIPLIER = 1.5;
 
     public static boolean tryToSpend(ServerPlayer player, double manaToSpend) {
         ManaData playerMana = player.getAttachedOrCreate(ModAttachments.MANA);
@@ -21,9 +22,9 @@ public class ManaManager {
             double newSpentTowardsGrowth = playerMana.spentTowardsGrowth() + manaToSpend;
             int newgrowthCount = playerMana.growthCount();
             double newMaxMana = playerMana.maxMana();
-            while (newSpentTowardsGrowth >= playerMana.maxMana() * 1.5) {
-                newMaxMana = playerMana.maxMana() * (MANA_MAX_MULTIPLIER + FIRST_MANA_BOOST * Math.pow(MANA_BOOST_CONST, playerMana.growthCount()) );
-                newSpentTowardsGrowth = newSpentTowardsGrowth - playerMana.maxMana();
+            while (newSpentTowardsGrowth >= getGrowthThreshold(newMaxMana)) {
+                newSpentTowardsGrowth = newSpentTowardsGrowth - getGrowthThreshold(newMaxMana);
+                newMaxMana = newMaxMana * (MANA_MAX_MULTIPLIER + FIRST_MANA_BOOST * Math.pow(GROWTH_DECAY, newgrowthCount));
                 newgrowthCount++;
             }
                 ManaData newPlayerMana = new ManaData(newMaxMana, newCurrentMana, newgrowthCount, newSpentTowardsGrowth);
@@ -41,15 +42,8 @@ public class ManaManager {
         return currentMana;
     }
 
-    public static ArrayList getPlayerManaInfo(ServerPlayer player) {
-        ManaData playerMana = player.getAttachedOrCreate(ModAttachments.MANA);
-        ArrayList playerManaInfo = new ArrayList();
-        playerManaInfo.add(Math.round(playerMana.currentMana()));
-        playerManaInfo.add(Math.round(playerMana.maxMana()));
-        playerManaInfo.add(playerMana.growthCount());
-        playerManaInfo.add(Math.round(playerMana.spentTowardsGrowth()));
-        return playerManaInfo;
-
+    public static double getGrowthThreshold(double maxMana) {
+        return maxMana * GROWTH_UP_MULTIPLIER ;
     }
 
 }

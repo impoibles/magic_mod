@@ -9,9 +9,6 @@ import net.minecraft.commands.Commands;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerPlayer;
 
-import java.util.ArrayList;
-
-import static com.example.mana.ManaManager.getPlayerManaInfo;
 
 public class ManaCommands {
     public static void register() {
@@ -20,18 +17,23 @@ public class ManaCommands {
                     Commands.literal("mana")
                             .executes(context -> {
                                 ServerPlayer player = context.getSource().getPlayerOrException();
-                                ArrayList playerManaInfo = getPlayerManaInfo(player);
+                                ManaData playerMana = player.getAttachedOrCreate(ModAttachments.MANA);
                                 context.getSource().sendSuccess(() ->
-                                                Component.translatable("command.modid.mana_count", playerManaInfo.getFirst(), playerManaInfo.get(1)),
+                                                Component.translatable("command.modid.mana_count",
+                                                        Math.round(playerMana.currentMana()),
+                                                        Math.round(playerMana.maxMana())),
                                         false);
                                 return 1;
                             })
                             .then(Commands.literal("info")
                                     .executes(context -> {
                                         ServerPlayer player = context.getSource().getPlayerOrException();
-                                        ArrayList playerManaInfo = getPlayerManaInfo(player);
+                                        ManaData playerMana = player.getAttachedOrCreate(ModAttachments.MANA);
                                         context.getSource().sendSuccess(() ->
-                                                        Component.translatable("command.modid.mana_info", playerManaInfo),
+                                                        Component.translatable("command.modid.mana_info",
+                                                                playerMana.growthCount(),
+                                                                Math.round(playerMana.spentTowardsGrowth()),
+                                                                Math.round(ManaManager.getGrowthThreshold(playerMana.maxMana()))),
                                                 false);
                                         return 1;
                                     }))

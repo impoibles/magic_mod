@@ -11,7 +11,7 @@
     "item.modid.light_crystal.tooltip": "Shines with pure light",
     "item.modid.dark_crystal": "Dark Crystal",
     "item.modid.dark_crystal.tooltip": "Absorbs all light around it",
-    "command.modid.mana_info": "Your mana level is %3$s \nExperience %4$s/%2$s",
+    "command.modid.mana_info": "Your mana level is %1$s \nExperience %2$s/%3$s",
     "command.modid.mana_count": "Mana: %1$s/%2$s. ",
     "command.modid.set_current_mana": "Mana has been changed to %1$s",
     "command.modid.spend_mana": "You spent %1$s mana",
