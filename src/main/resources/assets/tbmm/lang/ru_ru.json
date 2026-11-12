@@ -15,7 +15,7 @@
     "command.tbmm.mana_count": "Мана: %1$s из %2$s",
     "command.tbmm.set_current_mana": "Мана была изменена, текущее значение: %1$s",
     "command.tbmm.spend_mana": "Потрачено маны %1$s",
-    "command.tbmm.cannot_spend_mana": "Недостаточно маны",
+    "command.tbmm.cannot_spend_mana": "Недостаточно маны, требуется %1$s",
     "effect.tbmm.mana_exhaustion": "Иссушение маны",
     "itemGroup.tbmm.magic": "Магия"
 }

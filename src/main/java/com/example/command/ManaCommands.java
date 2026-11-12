@@ -43,13 +43,15 @@ public class ManaCommands {
                                                     {
                                                 ServerPlayer player = context.getSource().getPlayerOrException();
                                                 double amount = DoubleArgumentType.getDouble(context, "amount");
-                                                if (ManaManager.tryToSpend(player, amount)) {
+                                                ManaManager.SpendResult spendResult = ManaManager.tryToSpend(player, amount);
+                                                if (spendResult.isSpent()) {
                                                     context.getSource().sendSuccess(() ->
-                                                                    Component.translatable("command.tbmm.spend_mana", amount),
+                                                                    Component.translatable("command.tbmm.spend_mana",Math.round(spendResult.summaryManaToSpend())),
                                                             false);
                                                     return 1;
                                                 } else {
-                                                    context.getSource().sendFailure(Component.translatable("command.tbmm.cannot_spend_mana"));
+                                                    context.getSource().sendFailure(Component.translatable("command.tbmm.cannot_spend_mana", Math.round(spendResult.summaryManaToSpend()))
+                                                    );
                                                     return 0;
                                                 }
 

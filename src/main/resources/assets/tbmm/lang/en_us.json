@@ -15,7 +15,7 @@
     "command.tbmm.mana_count": "Mana: %1$s/%2$s. ",
     "command.tbmm.set_current_mana": "Mana has been changed to %1$s",
     "command.tbmm.spend_mana": "You spent %1$s mana",
-    "command.tbmm.cannot_spend_mana": "You don't have enough mana",
+    "command.tbmm.cannot_spend_mana": "You don't have enough mana, need %1$s",
     "effect.tbmm.mana_exhaustion": "Mana Exhaustion",
     "itemGroup.tbmm.magic": "Magic"
 }
