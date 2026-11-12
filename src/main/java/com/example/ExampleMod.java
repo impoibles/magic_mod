@@ -1,6 +1,7 @@
 package com.example;
 
 import com.example.command.ManaCommands;
+import com.example.effects.ModEffects;
 import com.example.mana.ManaRegen;
 import com.example.attachment.ModAttachments;
 import net.fabricmc.api.ModInitializer;
@@ -8,11 +9,12 @@ import com.example.item.ModItems;
 import com.example.item.ModItemGroups;
 import net.minecraft.resources.ResourceLocation;
 
+import net.minecraft.world.effect.MobEffects;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class ExampleMod implements ModInitializer {
-	public static final String MOD_ID = "modid";
+	public static final String MOD_ID = "tbmm";
 
 	// This logger is used to write text to the console and the log file.
 	// It is considered best practice to use your mod id as the logger's name.
@@ -31,6 +33,7 @@ public class ExampleMod implements ModInitializer {
 		ModAttachments.register();
 		ManaCommands.register();
 		ManaRegen.register();
+		ModEffects.register();
 	}
 
 	public static ResourceLocation id(String path) {

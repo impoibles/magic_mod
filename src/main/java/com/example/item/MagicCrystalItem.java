@@ -37,7 +37,7 @@ public abstract class MagicCrystalItem extends Item {
 
     /**
      * Ключ описания в lang-файле.
-     * По умолчанию это ключ предмета + ".tooltip", например "item.modid.fire_crystal.tooltip".
+     * По умолчанию это ключ предмета + ".tooltip", например "item.tbmm.fire_crystal.tooltip".
      * Наследник может переопределить метод, если нужен другой ключ.
      */
     protected String getTooltipKey() {

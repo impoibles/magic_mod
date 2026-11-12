@@ -1,10 +1,9 @@
 {
 	"format_version": "1.9.0",
 	"credit": "Made with Blockbench",
-	"parent": "magic_crystal",
 	"textures": {
-		"0": "modid:item/air_crystal",
-		"particle": "modid:item/air_crystal"
+		"0": "tbmm:item/air_crystal",
+		"particle": "tbmm:item/air_crystal"
 	},
 	"elements": [
 		{

@@ -1,0 +1,21 @@
+{
+    "item.tbmm.fire_crystal": "Fire Crystal",
+    "item.tbmm.fire_crystal.tooltip": "Burns with an eternal flame",
+    "item.tbmm.earth_crystal": "Earth Crystal",
+    "item.tbmm.earth_crystal.tooltip": "Holds the strength of stone",
+    "item.tbmm.water_crystal": "Water Crystal",
+    "item.tbmm.water_crystal.tooltip": "Flows like a mountain stream",
+    "item.tbmm.air_crystal": "Air Crystal",
+    "item.tbmm.air_crystal.tooltip": "Light as the wind",
+    "item.tbmm.light_crystal": "Light Crystal",
+    "item.tbmm.light_crystal.tooltip": "Shines with pure light",
+    "item.tbmm.dark_crystal": "Dark Crystal",
+    "item.tbmm.dark_crystal.tooltip": "Absorbs all light around it",
+    "command.tbmm.mana_info": "Your mana level is %1$s \nExperience %2$s/%3$s",
+    "command.tbmm.mana_count": "Mana: %1$s/%2$s. ",
+    "command.tbmm.set_current_mana": "Mana has been changed to %1$s",
+    "command.tbmm.spend_mana": "You spent %1$s mana",
+    "command.tbmm.cannot_spend_mana": "You don't have enough mana",
+    "effect.tbmm.mana_exhaustion": "Mana Exhaustion",
+    "itemGroup.tbmm.magic": "Magic"
+}

@@ -15,7 +15,7 @@ public class ModItemGroups {
                 BuiltInRegistries.CREATIVE_MODE_TAB,
                 ExampleMod.id("magic"),
                 FabricItemGroup.builder()
-                        .title(Component.translatable("itemGroup.modid.magic"))
+                        .title(Component.translatable("itemGroup.tbmm.magic"))
                         .icon(() -> new ItemStack(ModItems.FIRE_CRYSTAL))
                         .displayItems((params, output) -> {
                             output.accept(ModItems.FIRE_CRYSTAL);

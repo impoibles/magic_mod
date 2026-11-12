@@ -19,7 +19,7 @@ public class ManaCommands {
                                 ServerPlayer player = context.getSource().getPlayerOrException();
                                 ManaData playerMana = player.getAttachedOrCreate(ModAttachments.MANA);
                                 context.getSource().sendSuccess(() ->
-                                                Component.translatable("command.modid.mana_count",
+                                                Component.translatable("command.tbmm.mana_count",
                                                         Math.round(playerMana.currentMana()),
                                                         Math.round(playerMana.maxMana())),
                                         false);
@@ -30,7 +30,7 @@ public class ManaCommands {
                                         ServerPlayer player = context.getSource().getPlayerOrException();
                                         ManaData playerMana = player.getAttachedOrCreate(ModAttachments.MANA);
                                         context.getSource().sendSuccess(() ->
-                                                        Component.translatable("command.modid.mana_info",
+                                                        Component.translatable("command.tbmm.mana_info",
                                                                 playerMana.growthCount(),
                                                                 Math.round(playerMana.spentTowardsGrowth()),
                                                                 Math.round(ManaManager.getGrowthThreshold(playerMana.maxMana()))),
@@ -45,11 +45,11 @@ public class ManaCommands {
                                                 double amount = DoubleArgumentType.getDouble(context, "amount");
                                                 if (ManaManager.tryToSpend(player, amount)) {
                                                     context.getSource().sendSuccess(() ->
-                                                                    Component.translatable("command.modid.spend_mana", amount),
+                                                                    Component.translatable("command.tbmm.spend_mana", amount),
                                                             false);
                                                     return 1;
                                                 } else {
-                                                    context.getSource().sendFailure(Component.translatable("command.modid.cannot_spend_mana"));
+                                                    context.getSource().sendFailure(Component.translatable("command.tbmm.cannot_spend_mana"));
                                                     return 0;
                                                 }
 
@@ -64,7 +64,7 @@ public class ManaCommands {
                                                 ServerPlayer player = context.getSource().getPlayerOrException();
                                                 double settedMana = ManaManager.setPlayerMana(player, currentMana);
                                                 context.getSource().sendSuccess(() ->
-                                                                Component.translatable("command.modid.set_current_mana", settedMana),
+                                                                Component.translatable("command.tbmm.set_current_mana", settedMana),
                                                         false);
                                                 return 1;
                                             })

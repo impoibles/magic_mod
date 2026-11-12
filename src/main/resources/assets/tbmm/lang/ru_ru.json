@@ -1,0 +1,21 @@
+{
+    "item.tbmm.fire_crystal": "Кристалл огня",
+    "item.tbmm.fire_crystal.tooltip": "Горит вечным пламенем",
+    "item.tbmm.earth_crystal": "Кристалл земли",
+    "item.tbmm.earth_crystal.tooltip": "Хранит силу камня",
+    "item.tbmm.water_crystal": "Кристалл воды",
+    "item.tbmm.water_crystal.tooltip": "Течёт, как горный ручей",
+    "item.tbmm.air_crystal": "Кристалл воздуха",
+    "item.tbmm.air_crystal.tooltip": "Лёгкий, как ветер",
+    "item.tbmm.light_crystal": "Кристалл света",
+    "item.tbmm.light_crystal.tooltip": "Сияет чистым светом",
+    "item.tbmm.dark_crystal": "Кристалл тьмы",
+    "item.tbmm.dark_crystal.tooltip": "Поглощает весь свет вокруг",
+    "command.tbmm.mana_info": "Уровень маны: %1$s \nОпыт: %2$s/%3$s",
+    "command.tbmm.mana_count": "Мана: %1$s из %2$s",
+    "command.tbmm.set_current_mana": "Мана была изменена, текущее значение: %1$s",
+    "command.tbmm.spend_mana": "Потрачено маны %1$s",
+    "command.tbmm.cannot_spend_mana": "Недостаточно маны",
+    "effect.tbmm.mana_exhaustion": "Иссушение маны",
+    "itemGroup.tbmm.magic": "Магия"
+}
