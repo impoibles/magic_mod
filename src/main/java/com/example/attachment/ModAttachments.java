@@ -3,6 +3,7 @@ package com.example.attachment;
 import com.example.ExampleMod;
 import com.example.mana.ManaData;
 import net.fabricmc.fabric.api.attachment.v1.AttachmentRegistry;
+import net.fabricmc.fabric.api.attachment.v1.AttachmentSyncPredicate;
 import net.fabricmc.fabric.api.attachment.v1.AttachmentType;
 import java.util.concurrent.ThreadLocalRandom;
 
@@ -14,7 +15,8 @@ public class ModAttachments {
                 builder -> builder
                         .persistent(ManaData.CODEC)
                         .copyOnDeath()
-                .initializer(ModAttachments::initializeMana));
+                        .initializer(ModAttachments::initializeMana)
+                        .syncWith(ManaData.STREAM_CODEC, AttachmentSyncPredicate.targetOnly()));
     }
 
     private static ManaData initializeMana() {
