@@ -14,7 +14,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ManaManager {
-    private static final double[] COST_MULTIPLIER_BY_EXHAUSTION = {1.0, 1.2, 1.5};
     private static final double FIRST_MANA_BOOST = 0.5;
     private static final double GROWTH_DECAY = 0.9;
     private static final double MANA_MAX_MULTIPLIER = 1;
@@ -31,7 +30,7 @@ public class ManaManager {
 
     public static SpendResult tryToSpend(ServerPlayer player, double manaToSpend) {
         ManaData playerMana = player.getAttachedOrCreate(ModAttachments.MANA);
-        double summaryManaToSpend = manaToSpend * getMultiplierByExhaustionEffectLevel(player, COST_MULTIPLIER_BY_EXHAUSTION);
+        double summaryManaToSpend = manaToSpend * player.getAttributeValue(ModAttributes.COST_MULTIPLIER_ATTRIBUTE);
         if (summaryManaToSpend > playerMana.currentMana()) {
             return new  SpendResult(false, summaryManaToSpend);
         }
@@ -75,20 +74,6 @@ public class ManaManager {
 
     private static void giveManaExhaustionToPlayer(ServerPlayer player, int durationSeconds, int level){
         player.addEffect(new MobEffectInstance(ModEffects.MANA_EXHAUSTION, durationSeconds * SharedConstants.TICKS_PER_SECOND, level));
-    }
-
-    public static int getExhaustionEffectLevel(ServerPlayer player) {
-        MobEffectInstance exhaustionEffect = player.getEffect(ModEffects.MANA_EXHAUSTION);
-        if (exhaustionEffect != null) {
-            return exhaustionEffect.getAmplifier()+1;
-        }
-        return 0;
-    }
-
-    public static double getMultiplierByExhaustionEffectLevel(ServerPlayer player, double[] multipliers) {
-        int level = Math.min(getExhaustionEffectLevel(player), multipliers.length - 1);
-        return multipliers[level];
-
     }
 
     public static double getPlayerMaxMana(ServerPlayer player) {

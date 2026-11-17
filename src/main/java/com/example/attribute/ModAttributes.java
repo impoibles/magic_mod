@@ -12,10 +12,13 @@ import net.minecraft.world.entity.ai.attributes.RangedAttribute;
 public class ModAttributes{
     public static final Holder<Attribute> MAX_MANA_ATTRIBUTE = registerAttribute("max_mana_attribute",
             new RangedAttribute("attribute.tbmm.max_mana_attribute", 100, 1, 50000).setSyncable(true)
-    );;
+    );
     public static final Holder<Attribute> MANA_REGEN_SPEED_ATTRIBUTE = registerAttribute("regen_speed_mana_attribute",
             new RangedAttribute("attribute.tbmm.regen_speed_mana_attribute", 1, 0, 5).setSyncable(true)
-    );;
+    );
+    public static final Holder<Attribute> COST_MULTIPLIER_ATTRIBUTE = registerAttribute("cost_multiplier_mana_attribute",
+            new RangedAttribute("attribute.tbmm.cost_multiplier_mana", 1, 0.5, 2).setSyncable(true)
+    );
 
     private static Holder<Attribute> registerAttribute(String name, Attribute  attribute){
        return  Registry.registerForHolder(

@@ -17,7 +17,8 @@
     "command.tbmm.spend_mana": "Потрачено маны %1$s",
     "command.tbmm.cannot_spend_mana": "Недостаточно маны, требуется %1$s",
     "effect.tbmm.mana_exhaustion": "Иссушение маны",
-    "attribute.tbmm.max_mana_attribute": "Максимальная мана",
-    "attribute.tbmm.regen_speed_mana_attribute": "Скорость регенериации маны",
+    "attribute.tbmm.max_mana_attribute": "Максимальная мана ",
+    "attribute.tbmm.regen_speed_mana_attribute": "Скорость регенерации маны ",
+    "attribute.tbmm.cost_multiplier_mana": "Стоимость использования маны ",
     "itemGroup.tbmm.magic": "Магия"
 }

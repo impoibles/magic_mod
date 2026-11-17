@@ -37,6 +37,12 @@ public class ModEffects {
                                 -0.5,
                                 AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL
                         )
+                        .addAttributeModifier(
+                                ModAttributes.COST_MULTIPLIER_ATTRIBUTE,
+                                ExampleMod.id("mana_exhaustion_cost_multiplier_mana"),
+                                0.25,
+                                AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL
+                        )
 
         );
     }

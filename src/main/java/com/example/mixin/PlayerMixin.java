@@ -16,7 +16,8 @@ public class PlayerMixin {
     private static void addManaAttributes(CallbackInfoReturnable<AttributeSupplier.Builder> cir){
         cir.getReturnValue()
                 .add(ModAttributes.MAX_MANA_ATTRIBUTE)
-                .add(ModAttributes.MANA_REGEN_SPEED_ATTRIBUTE);
+                .add(ModAttributes.MANA_REGEN_SPEED_ATTRIBUTE)
+                .add(ModAttributes.COST_MULTIPLIER_ATTRIBUTE);
     }
 
 }

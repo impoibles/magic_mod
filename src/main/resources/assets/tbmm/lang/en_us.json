@@ -17,7 +17,8 @@
     "command.tbmm.spend_mana": "You spent %1$s mana",
     "command.tbmm.cannot_spend_mana": "You don't have enough mana, need %1$s",
     "effect.tbmm.mana_exhaustion": "Mana Exhaustion",
-    "attribute.tbmm.max_mana_attribute": "Max Mana",
-    "attribute.tbmm.regen_speed_mana_attribute": "Mana regeneration speed",
+    "attribute.tbmm.max_mana_attribute": "Max Mana ",
+    "attribute.tbmm.regen_speed_mana_attribute": "Mana regeneration speed ",
+    "attribute.tbmm.cost_multiplier_mana": "Mana cost multiplier ",
     "itemGroup.tbmm.magic": "Magic"
 }
