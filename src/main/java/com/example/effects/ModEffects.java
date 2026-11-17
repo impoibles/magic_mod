@@ -1,6 +1,7 @@
 package com.example.effects;
 
 import com.example.ExampleMod;
+import com.example.attribute.ModAttributes;
 import net.minecraft.core.Holder;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -10,7 +11,6 @@ import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 
 public class ModEffects {
-
     public static Holder<MobEffect> MANA_EXHAUSTION;
 
     private static Holder.Reference<MobEffect> registerEffect(String name, MobEffect effect) {
@@ -30,6 +30,12 @@ public class ModEffects {
                                 ExampleMod.id("mana_exhaustion_damage"),
                                 -4.0,
                                 AttributeModifier.Operation.ADD_VALUE
+                        )
+                        .addAttributeModifier(
+                                ModAttributes.MANA_REGEN_SPEED_ATTRIBUTE,
+                                ExampleMod.id("mana_exhaustion_regen_speed"),
+                                -0.5,
+                                AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL
                         )
 
         );
