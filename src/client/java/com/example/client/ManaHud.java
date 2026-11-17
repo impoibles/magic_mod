@@ -1,6 +1,7 @@
 package com.example.client;
 
 import com.example.attachment.ModAttachments;
+import com.example.attribute.ModAttributes;
 import com.example.mana.ManaData;
 import net.fabricmc.fabric.api.client.rendering.v1.HudRenderCallback;
 import net.minecraft.client.Minecraft;
@@ -27,7 +28,7 @@ public class ManaHud {
             //background
             guiGraphics.fill(manaLeftUpperAngleX, manaLeftUpperAngleY, manaRightBottomAngleX, manaRightBottomAngleY, 0x80000000);
 
-            double percentCurrentMana = clientManaData.currentMana() / clientManaData.maxMana();
+            double percentCurrentMana = clientManaData.currentMana() / client_player.getAttribute(ModAttributes.MAX_MANA_ATTRIBUTE).getValue();
             int manaHudLeftUpperAngleY = (int) Math.round(manaRightBottomAngleY - percentCurrentMana * (manaRightBottomAngleY - manaLeftUpperAngleY));
             //manaHud
             guiGraphics.fillGradient(
@@ -51,8 +52,5 @@ public class ManaHud {
 
         });
     }
-
-    private static void drawManaHud(GuiGraphics guiGraphics){
-        }
 }
 

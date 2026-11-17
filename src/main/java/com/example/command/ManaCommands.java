@@ -9,6 +9,8 @@ import net.minecraft.commands.Commands;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerPlayer;
 
+import static com.example.mana.ManaManager.getPlayerMaxMana;
+
 
 public class ManaCommands {
     public static void register() {
@@ -21,7 +23,7 @@ public class ManaCommands {
                                 context.getSource().sendSuccess(() ->
                                                 Component.translatable("command.tbmm.mana_count",
                                                         Math.round(playerMana.currentMana()),
-                                                        Math.round(playerMana.maxMana())),
+                                                        Math.round(getPlayerMaxMana(player))),
                                         false);
                                 return 1;
                             })

@@ -7,6 +7,8 @@ import net.minecraft.SharedConstants;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.effect.MobEffectInstance;
 
+import static com.example.mana.ManaManager.getPlayerMaxMana;
+
 
 public class ManaRegen {
     private static final double[] REGEN_MULTIPLIER_BY_EXHAUSTION = {1.0, 0.5, 0};
@@ -16,11 +18,16 @@ public class ManaRegen {
         ServerTickEvents.END_SERVER_TICK.register((server) -> {
             server.getPlayerList().getPlayers().forEach(player -> {
                 ManaData playerMana = player.getAttachedOrCreate(ModAttachments.MANA);
-                if (playerMana.currentMana() < playerMana.maxMana()) {
+                double playerMaxMana = getPlayerMaxMana(player);
+                if (playerMana.currentMana() < playerMaxMana) {
                     double manaRegen = (ManaManager.getMultiplierByExhaustionEffectLevel(player, REGEN_MULTIPLIER_BY_EXHAUSTION)
-                            * SPEED_COEFFICIENT * Math.sqrt(playerMana.maxMana()))/SharedConstants.TICKS_PER_SECOND;
-                    double newPlayerCurrentMana = Math.min(playerMana.maxMana(), playerMana.currentMana() + manaRegen);
+                            * SPEED_COEFFICIENT * Math.sqrt(playerMaxMana))/SharedConstants.TICKS_PER_SECOND;
+                    double newPlayerCurrentMana = Math.min(playerMaxMana, playerMana.currentMana() + manaRegen);
                     ManaData newPlayerMana = new ManaData(playerMana.maxMana(), newPlayerCurrentMana, playerMana.growthCount(), playerMana.spentTowardsGrowth());
+                    player.setAttached(ModAttachments.MANA, newPlayerMana);
+                }
+                else if (playerMana.currentMana() > playerMaxMana) {
+                    ManaData newPlayerMana = new ManaData(playerMana.maxMana(), playerMaxMana, playerMana.growthCount(), playerMana.spentTowardsGrowth());
                     player.setAttached(ModAttachments.MANA, newPlayerMana);
                 }
             });

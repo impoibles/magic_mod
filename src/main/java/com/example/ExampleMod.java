@@ -1,5 +1,6 @@
 package com.example;
 
+import com.example.attribute.ModAttributes;
 import com.example.command.ManaCommands;
 import com.example.effects.ModEffects;
 import com.example.mana.ManaRegen;
@@ -28,6 +29,7 @@ public class ExampleMod implements ModInitializer {
 		// Proceed with mild caution.
 
 		LOGGER.info("Hello Fabric world!");
+		ModAttributes.register();
 		ModItems.register();
 		ModItemGroups.register();
 		ModAttachments.register();
